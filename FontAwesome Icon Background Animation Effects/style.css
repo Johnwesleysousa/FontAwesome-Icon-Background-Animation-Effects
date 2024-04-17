@@ -1,0 +1,150 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-color: #111;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+section .row{
+    position: relative;
+    top: -50%;
+    width: 100%;
+    display: flex;
+    padding: 10px 0;
+    white-space: nowrap;
+    font-size: 64px;
+    transform: rotate(-30deg);
+}
+
+i{
+    color: rgba(0, 0, 0, 0.5);
+    transition: 1s;
+    padding: 0 5px;
+    user-select: none; /*exemplo a baixo*/
+    cursor: default;
+}
+
+i:hover{
+    transition: 0s;
+    color: #0f0;
+    text-shadow: 0 0 120px #0f0;
+    /* background-color: black; */
+    /* border-radius: 100%; */
+}
+
+section .row div{
+    animation: animate1 60s linear infinite;
+    animation-delay: -60s;
+}
+
+
+section .row div:nth-child(2){
+    animation: animate2 60s linear infinite;
+    animation-delay: -30s;
+}
+
+@keyframes animate1 {
+
+    0%{
+        transform: translateX(100%);
+    }
+
+    100%{
+        transform: translateX(-100%);
+    }
+}
+
+
+@keyframes animate2 {
+
+    0%{
+        transform: translateX(0%);
+    }
+
+    100%{
+        transform: translateX(-200%);
+    }
+}
+
+
+
+section .row:nth-child(even) div{
+    animation: animate3 60s linear infinite;
+    animation-delay: -60s;
+}
+
+
+section .row:nth-child(even) div:nth-child(2){
+    animation: animate4 60s linear infinite;
+    animation-delay: -30s;
+}
+
+@keyframes animate3 {
+
+    0%{
+        transform: translateX(-100%);
+    }
+
+    100%{
+        transform: translateX(100%);
+    }
+}
+
+
+@keyframes animate4 {
+
+    0%{
+        transform: translateX(-200%);
+    }
+
+    100%{
+        transform: translateX(0%);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* --------------------------------------------------------------------- */
+
+/* :nth-child */
+
+/* A propriedade :nth-child no CSS é um seletor que permite selecionar elementos com base na sua posição dentro de um elemento pai. Ela aceita uma fórmula matemática como argumento, na qual você pode especificar a posição exata do elemento que deseja estilizar. Isso é útil para aplicar estilos diferenciados a elementos específicos, como por exemplo, estilizar cada terceiro elemento de uma lista. */
+
+
+
+/* user-select: none; */
+
+/* A propriedade "user-select: none;" no CSS serve para desabilitar a capacidade de seleção de texto dentro de um elemento HTML. Isso significa que o usuário não poderá mais selecionar ou copiar o texto presente nesse elemento, tornando-o não interativo nesse aspecto. Essa propriedade é útil quando se deseja evitar que o conteúdo seja copiado ou modificado pelos usuários do site. */
+
+
+/* white-space: nowrap; */
+
+/* A propriedade white-space: nowrap; no CSS serve para especificar que o texto não deve quebrar em várias linhas automaticamente. Isso significa que o texto será exibido em uma única linha, sem quebra de linha. Essa propriedade é útil em casos em que é necessário manter o texto em uma única linha, como em títulos ou em menus de navegação. */
+
+
+/* ---------------------------------------------- */
+
+/* white-space: normal; */
+
+/* A propriedade `white-space: normal;` no CSS é utilizada para definir o comportamento da quebra de linha e espaçamento de um elemento. Essa propriedade especifica que o texto deve ser exibido com espaços normais entre as palavras e quebras de linha automáticas conforme necessário para que o texto se ajuste ao tamanho do elemento ou contêiner em que está inserido. Em resumo, ela permite que o texto seja exibido de forma mais natural e legível, evitando que palavras sejam quebradas de forma inadequada. */
